@@ -12,70 +12,94 @@
  */
 
 ?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
+<!-- footer-section start -->
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+  <div id="subfooter" class="subfooter">
+      <div class="container">
+          <div class="row">
+            <div class="column col-lg-4">
+               <div class="subfooter-column">
+                   <div class="text-col-1" id="t-title">
+                        <div class="text-col">
+                         About us
+                        </div>
+                        <div class="textwidget"><p class="paragraph"> Etiam rutrum mattis metus vitae dapibus. <strong>Cras sagitti</strong>s leo tellus, non rhoncus velit <em>efficitur</em> tristique.</p>
+                            <h5 class="contact-info">Contact Info</h5>
+                            <p><i class="fa fa-map-marker"></i>&nbsp;&nbsp;<strong>Adress:</strong> 75 Ninth Avenue New York, NY 10011</p>
+                            <p><i class="fa fa-phone"></i>&nbsp;&nbsp;<strong>Telephone:</strong> +1 212-565-0000</p>
+                            <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;<strong>Email:</strong> <a href="mailto:contact@gmail.com">contact@gmail.com</a></p>
+                        </div>
 
-	<footer id="colophon" class="site-footer">
+                   </div>
+               </div>
 
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'twentytwentyone' ); ?>" class="footer-navigation">
-				<ul class="footer-navigation-wrapper">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'items_wrap'     => '%3$s',
-							'container'      => false,
-							'depth'          => 1,
-							'link_before'    => '<span>',
-							'link_after'     => '</span>',
-							'fallback_cb'    => false,
-						)
-					);
-					?>
-				</ul><!-- .footer-navigation-wrapper -->
-			</nav><!-- .footer-navigation -->
-		<?php endif; ?>
-		<div class="site-info">
-			<div class="site-name">
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php else : ?>
-					<?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
-						<?php if ( is_front_page() && ! is_paged() ) : ?>
-							<?php bloginfo( 'name' ); ?>
-						<?php else : ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						<?php endif; ?>
-					<?php endif; ?>
-				<?php endif; ?>
-			</div><!-- .site-name -->
 
-			<?php
-			if ( function_exists( 'the_privacy_policy_link' ) ) {
-				the_privacy_policy_link( '<div class="privacy-policy">', '</div>' );
-			}
-			?>
+            </div>
+            <div class="column col-lg-5">
+               <div class="subfooter-column">
+                   <div class="text-col-1" id="t-title">
+                     <div class="text-col2">Antreas is social</div> 
+                     <div id="social">
+                        <a class="facebookBtn smGlobalBtn" href="#" ></a>
+                        <a class="twitterBtn smGlobalBtn" href="#" ></a>
+                        <a class="googleplusBtn smGlobalBtn" href="#" ></a>
+                        <a class="linkedinBtn smGlobalBtn" href="#" ></a>
+                        <a class="pinterestBtn smGlobalBtn" href="#" ></a>
+                     
+                        <a class="tumblrBtn smGlobalBtn" href="#" ></a>
+                        <a class="rssBtn smGlobalBtn" href="#" ></a>
+                     </div>
+                     <div class="text-col2">Search</div> 
+                     <div class="search-box">
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s">
+					<input type="submit" id="searchsubmit" value="Search">
+				     </div>
+                 </div>
+              </div>
+            </div>
+            <div class="column col-lg-3">
+            <div class="subfooter-column col">
+                   <div class="text-col-1" id="t-title">
+                     <div class="text-col">Recent posts</div> 
+                        <div class="img-post-div">
+                            <div class="div1">
+                            <img src="image/img.jpg" class="air">
+                            <p class="texte">
+                            <a href="#" class="img-head">Travel Tips for South Africa</a><br>
+                            <span class="texts">   October 12, 2018</span>
+                            <p>
+                            </div>
+                            <div class="div1">
+                            <img src="image/img1.jpg" class="air">
+                            <p class="texte">
+                            <a href="#" class="img-head">Travel Tips for South Africa</a><br>
+                            <span class="texts">   October 12, 2018</span>
+                            <p>
+                           </div>
+                            <div class="div1">
+                            <img src="image/img2.jpg" class="air">
+                            <p class="texte" >
+                            <a href="#" class="img-head">Travel Tips for South Africa</a><br>
+                            <span class="texts">   October 12, 2018</span>
+                            <p>
+  
+                           </div>
+                        </div>
+                    
+                   </div>
+             </div>
 
-			<div class="powered-by">
-				<?php
-				printf(
-					/* translators: %s: WordPress. */
-					esc_html__( 'Proudly powered by %s.', 'twentytwentyone' ),
-					'<a href="' . esc_url( __( 'https://wordpress.org/', 'twentytwentyone' ) ) . '">WordPress</a>'
-				);
-				?>
-			</div><!-- .powered-by -->
+            </div>
+        </div>
+      </div>
 
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+  </div>
 
-</div><!-- #page -->
+  <div class="clear"></div>
 
+
+<script src="h-script.js" ></script>
 <?php wp_footer(); ?>
-
 </body>
 </html>
